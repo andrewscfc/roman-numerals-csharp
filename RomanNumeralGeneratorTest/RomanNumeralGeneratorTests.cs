@@ -9,6 +9,7 @@ namespace RomanNumeralGeneratorTest
     public class RomanNumeralGeneratorTests
     {
         private RomanNumeralGenerator _testObj;
+        private const string TallyCase = "tally case";
 
         [SetUp]
         public void Setup()
@@ -73,16 +74,45 @@ namespace RomanNumeralGeneratorTest
             TestAlgorithm(valueToExpected);
         }
         
+        public static (int number, string expectedNumeral)[] ThousandsValueSource = {
+            (1000, "X"),
+            (2000, "XX"),
+            (3000, "XXX")
+        };
+        
+        [Test]
+        public void Generate_Thousands_ExpectedNumerals(
+            [ValueSource(nameof(ThousandsValueSource))](int number, string expectedNumeral) valueToExpected)
+        {
+            TestAlgorithm(valueToExpected);
+        }
+        
+        public static (int number, string expectedNumeral)[] SubtractivePatternsValueSource = {
+            (14, "XIV"),
+            (19, "XIX"),
+            (44, "XLIV"),
+            (49, "XLIL"),
+            (99, "XCIX"),
+            
+        };
+        
+        [Test]
+        public void Generate_SubtractivePatterns_ExpectedNumerals(
+            [ValueSource(nameof(SubtractivePatternsValueSource))](int number, string expectedNumeral) valueToExpected)
+        {
+            TestAlgorithm(valueToExpected);
+        }
+        
 
         private void TestAlgorithm((int number, string expectedNumeral) valueToExpected)
         {
             //Arrange
 
             //Act
-            var result = _testObj.Generate(valueToExpected.Item1);
+            var result = _testObj.Generate(valueToExpected.number);
 
             //Assert
-            result.Should().Be(valueToExpected.Item2);
+            result.Should().Be(valueToExpected.expectedNumeral);
         }
     }
 }
