@@ -3,7 +3,7 @@ using FluentAssertions;
 using NUnit.Framework;
 using RomanNumerals;
 
-namespace RomanNumeralGeneratorTest
+namespace RomanNumeralsTest
 {
     /// <summary>
     /// Tests written before implemenation driven by the specification and nature of 

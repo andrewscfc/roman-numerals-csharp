@@ -29,8 +29,6 @@ namespace RomanNumerals
                 {9, "CM"},
             });
 
-
-
         private readonly PlaceValueNumeralMapping _tenMappings = new PlaceValueNumeralMapping(10,
             new Dictionary<int, string>
             {

@@ -6,3 +6,5 @@ obj
 /.vs/RomanNumerals/v15/Server/sqlite3/db.lock
 /.vs/RomanNumerals/v15/Server/sqlite3/storage.ide
 /RomanNumerals.sln.DotSettings.user
+/RomanNumerals/obj
+/RomanNumeralGeneratorTest/obj

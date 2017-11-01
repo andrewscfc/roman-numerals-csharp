@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using RomanNumerals;
 
-namespace RomanNumeralGeneratorTest
+namespace RomanNumeralsTest
 {
     /// <summary>
     /// More complex test designed to cover all supported numerals
