@@ -61,10 +61,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RomanNumeralGenerator\RomanNumeralGenerator.csproj">
-      <Project>{87F1D48E-91EE-4266-8AB3-61E9DDFB466C}</Project>
-      <Name>RomanNumeralGenerator</Name>
-    </ProjectReference>
     <ProjectReference Include="..\RomanNumerals\RomanNumerals.csproj">
       <Project>{87F1D48E-91EE-4266-8AB3-61E9DDFB466C}</Project>
       <Name>RomanNumerals</Name>
